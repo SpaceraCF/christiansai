@@ -374,18 +374,16 @@ function Pricing() {
                   </li>
                 ))}
               </ul>
-              <a
-                href={pkg.paymentLink}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/contact/"
                 className={`mt-8 block w-full rounded-lg py-3 text-center text-sm font-semibold ${
                   pkg.popular
                     ? "bg-[var(--teal)] text-white hover:bg-[var(--teal-dark)]"
                     : "border border-[var(--teal)] text-[var(--teal)] hover:bg-[var(--teal-light)]"
                 }`}
               >
-                Get started
-              </a>
+                Book a free chat
+              </Link>
             </div>
           ))}
         </div>
