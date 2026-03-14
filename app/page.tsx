@@ -5,9 +5,9 @@ function Hero() {
     <section className="bg-gradient-to-b from-[var(--teal-light)] to-white px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
       <div className="mx-auto max-w-4xl text-center">
         <h1 className="text-4xl font-bold leading-tight tracking-tight text-[var(--gray-900)] sm:text-5xl lg:text-6xl">
-          We answer your calls
+          Stop losing jobs
           <br />
-          <span className="text-[var(--teal)]">when you can&apos;t.</span>
+          <span className="text-[var(--teal)]">to voicemail.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[var(--gray-600)] sm:text-xl">
           24/7 AI phone assistant for local businesses in Central West NSW. Never miss a job again.
@@ -162,22 +162,24 @@ function HowAIHelps() {
   );
 }
 
-function CaseStudy() {
+function DemoCallout() {
   return (
     <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-3xl">
-        <div className="rounded-2xl border border-[var(--teal)] bg-gradient-to-br from-[var(--teal-light)] to-white p-8 sm:p-12">
-          <p className="text-sm font-semibold uppercase tracking-wide text-[var(--teal)]">Real Results</p>
+        <div className="rounded-2xl border border-[var(--teal)] bg-gradient-to-br from-[var(--teal-light)] to-white p-8 sm:p-12 text-center">
+          <p className="text-sm font-semibold uppercase tracking-wide text-[var(--teal)]">Hear It For Yourself</p>
           <h2 className="mt-2 text-2xl font-bold text-[var(--gray-900)] sm:text-3xl">
-            A local tradie was missing calls while on the tools.
+            Don&apos;t take our word for it.
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-[var(--gray-700)]">
-            He knew he was losing work but couldn&apos;t answer the phone mid-job. We set up an AI phone assistant
-            that answers calls, takes details, and sends him a summary he can check when he&apos;s ready.
+            Call <strong>0485 005 656</strong> right now. Our AI will answer — that&apos;s exactly what your customers would hear. It takes 30 seconds and costs you nothing.
           </p>
-          <p className="mt-4 text-lg font-semibold text-[var(--teal)]">
-            He stopped missing jobs. Simple as that.
-          </p>
+          <a
+            href="tel:0485005656"
+            className="mt-6 inline-block rounded-lg bg-[var(--teal)] px-8 py-3.5 text-base font-semibold text-white shadow-sm hover:bg-[var(--teal-dark)]"
+          >
+            Call 0485 005 656 — hear it live
+          </a>
         </div>
       </div>
     </section>
@@ -343,7 +345,7 @@ function Pricing() {
     <section className="bg-[var(--gray-50)] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center text-3xl font-bold text-[var(--gray-900)] sm:text-4xl">
-          Simple, honest pricing
+          Stop losing $300 a call. Start from $100/month.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-center text-lg text-[var(--gray-600)]">
           No hidden fees. No lock-in. Cancel anytime.
@@ -490,7 +492,7 @@ export default function Home() {
       <ROIFraming />
       <PainPoints />
       <HowAIHelps />
-      <CaseStudy />
+      <DemoCallout />
       <HowItWorks />
       <Industries />
       <Pricing />

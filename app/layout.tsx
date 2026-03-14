@@ -9,7 +9,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "AI Phone Assistant for Tradies & Small Businesses | Orange, Bathurst, Dubbo — Christian's AI",
+  title: "AI Phone Receptionist for Small Businesses | Orange, Bathurst & Central West NSW — Christian's AI",
   description:
     "AI phone assistants and automation for local small businesses in Orange, Bathurst, Dubbo & Mudgee. Never miss a call. From $100/month. No lock-in.",
 };
