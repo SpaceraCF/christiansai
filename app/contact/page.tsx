@@ -30,7 +30,7 @@ export default function ContactPage() {
               Fill in the form below and I&apos;ll get back to you within a business day.
             </p>
             <form
-              action="https://formspree.io/f/REPLACE_ME"
+              action="https://formspree.io/f/xqeyldaw"
               method="POST"
               className="mt-6 space-y-5"
             >
