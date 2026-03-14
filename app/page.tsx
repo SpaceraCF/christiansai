@@ -258,6 +258,11 @@ function Industries() {
       name: "Real Estate",
       description: "Capture every enquiry, schedule inspections, and never miss a potential buyer.",
     },
+    {
+      icon: "🔧",
+      name: "Automotive",
+      description: "Mechanics and tyre shops — answer calls while you're under a car, not putting down tools.",
+    },
   ];
 
   return (
