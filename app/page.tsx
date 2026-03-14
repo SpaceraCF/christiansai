@@ -304,6 +304,7 @@ function Pricing() {
         "SMS you instantly",
       ],
       popular: false,
+      paymentLink: "https://buy.stripe.com/fZu6oA3JkaZBamzg503cc00",
     },
     {
       name: "Always Open",
@@ -316,6 +317,7 @@ function Pricing() {
         "FAQ auto-responses",
       ],
       popular: true,
+      paymentLink: "https://buy.stripe.com/6oU4gs1Bc3x99iv2ea3cc01",
     },
     {
       name: "Run on Autopilot",
@@ -328,6 +330,7 @@ function Pricing() {
         "Monthly check-in with Christian",
       ],
       popular: false,
+      paymentLink: "https://buy.stripe.com/8x228k2Fg4BdbqD4mi3cc02",
     },
   ];
 
@@ -371,8 +374,10 @@ function Pricing() {
                   </li>
                 ))}
               </ul>
-              <Link
-                href="/contact/"
+              <a
+                href={pkg.paymentLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`mt-8 block w-full rounded-lg py-3 text-center text-sm font-semibold ${
                   pkg.popular
                     ? "bg-[var(--teal)] text-white hover:bg-[var(--teal-dark)]"
@@ -380,7 +385,7 @@ function Pricing() {
                 }`}
               >
                 Get started
-              </Link>
+              </a>
             </div>
           ))}
         </div>
