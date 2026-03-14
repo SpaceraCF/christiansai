@@ -9,9 +9,9 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Christian's AI for Business | AI Automation for Local Small Businesses",
+  title: "AI Phone Assistant for Tradies & Small Businesses | Orange, Bathurst, Dubbo — Christian's AI",
   description:
-    "Stop missing calls and bookings. Christian's AI for Business sets up AI phone assistants and automation for small businesses in Central West NSW. Local. Simple. No lock-in contracts.",
+    "AI phone assistants and automation for local small businesses in Orange, Bathurst, Dubbo & Mudgee. Never miss a call. From $100/month. No lock-in.",
 };
 
 function Header() {
@@ -106,7 +106,10 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t border-[var(--gray-700)] pt-6 text-center text-sm text-[var(--gray-500)]">
+        <p className="mt-8 text-center text-sm text-[var(--gray-400)]">
+          Proudly serving local businesses in Orange, Bathurst, Dubbo, Mudgee and across Central West NSW.
+        </p>
+        <div className="mt-4 border-t border-[var(--gray-700)] pt-6 text-center text-sm text-[var(--gray-500)]">
           &copy; {new Date().getFullYear()} Christian&apos;s AI for Business. All rights reserved.
         </div>
       </div>
@@ -121,6 +124,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Christian's AI for Business",
+              "telephone": "+61485005656",
+              "url": "https://christiansai.com.au",
+              "priceRange": "$$",
+              "areaServed": ["Orange NSW", "Bathurst NSW", "Dubbo NSW", "Mudgee NSW", "Central West NSW"],
+              "serviceType": "AI Phone Assistant and Business Automation",
+              "description": "AI phone assistants and automation for local small businesses in Central West NSW. Never miss a call. From $100/month.",
+            }),
+          }}
+        />
+      </head>
       <body className={`${geistSans.variable} antialiased`}>
         <Header />
         {children}

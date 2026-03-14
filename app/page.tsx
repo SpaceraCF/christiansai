@@ -5,30 +5,64 @@ function Hero() {
     <section className="bg-gradient-to-b from-[var(--teal-light)] to-white px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
       <div className="mx-auto max-w-4xl text-center">
         <h1 className="text-4xl font-bold leading-tight tracking-tight text-[var(--gray-900)] sm:text-5xl lg:text-6xl">
-          Stop missing calls.
+          We answer your calls
           <br />
-          <span className="text-[var(--teal)]">Start winning more work.</span>
+          <span className="text-[var(--teal)]">when you can&apos;t.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[var(--gray-600)] sm:text-xl">
-          AI phone assistants and automation for local small businesses in Central West NSW.
-          I build it, test it, and look after it — so you can focus on your business.
-        </p>
-        <p className="mt-3 text-sm font-semibold text-[var(--teal)]">
-          Local. Simple. No lock-in contracts.
+          24/7 AI phone assistant for local businesses in Central West NSW. Never miss a job again.
         </p>
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <Link
-            href="/contact/"
-            className="w-full rounded-lg bg-[var(--teal)] px-8 py-3.5 text-center text-base font-semibold text-white shadow-sm hover:bg-[var(--teal-dark)] sm:w-auto"
-          >
-            Book a Free Chat
-          </Link>
           <a
             href="tel:0485005656"
+            className="w-full rounded-lg bg-[var(--teal)] px-8 py-3.5 text-center text-base font-semibold text-white shadow-sm hover:bg-[var(--teal-dark)] sm:w-auto"
+          >
+            Call the AI now — 0485 005 656
+          </a>
+          <Link
+            href="/contact/"
             className="w-full rounded-lg border-2 border-[var(--teal)] px-8 py-3.5 text-center text-base font-semibold text-[var(--teal)] hover:bg-[var(--teal-light)] sm:w-auto"
           >
-            Call Sarah — 0485 00 56 56
-          </a>
+            Book a free chat
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ROIFraming() {
+  const stats = [
+    {
+      stat: "1 missed call = $300–$800 lost",
+      description: "For a tradie, that's a job gone to a competitor.",
+    },
+    {
+      stat: "We charge from $100/month",
+      description: "Less than one missed job pays for a year.",
+    },
+    {
+      stat: "24/7 answering",
+      description: "While you're on the tools, in transit, or asleep.",
+    },
+  ];
+
+  return (
+    <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <div className="mx-auto max-w-6xl">
+        <h2 className="text-center text-3xl font-bold text-[var(--gray-900)] sm:text-4xl">
+          Do the numbers
+        </h2>
+        <div className="mt-12 grid gap-6 sm:grid-cols-3">
+          {stats.map((item) => (
+            <div
+              key={item.stat}
+              className="rounded-xl border border-[var(--gray-200)] bg-white p-6 shadow-sm text-center"
+            >
+              <p className="text-xl font-bold text-[var(--teal)]">{item.stat}</p>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--gray-600)]">{item.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -249,72 +283,110 @@ function Industries() {
   );
 }
 
+function CheckIcon() {
+  return (
+    <svg className="mt-0.5 h-5 w-5 shrink-0 text-[var(--teal)]" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+    </svg>
+  );
+}
+
 function Pricing() {
+  const packages = [
+    {
+      name: "Never Miss a Call",
+      setup: "$500",
+      monthly: "$100",
+      features: [
+        "AI answers every call 24/7",
+        "Books appointments",
+        "Takes messages",
+        "SMS you instantly",
+      ],
+      popular: false,
+    },
+    {
+      name: "Always Open",
+      setup: "$800",
+      monthly: "$150",
+      features: [
+        "Everything in Never Miss a Call",
+        "After-hours online booking",
+        "SMS confirmations to customers",
+        "FAQ auto-responses",
+      ],
+      popular: true,
+    },
+    {
+      name: "Run on Autopilot",
+      setup: "$1,500",
+      monthly: "$250",
+      features: [
+        "Everything in Always Open",
+        "Follow-up texts to missed leads",
+        "Review request automation",
+        "Monthly check-in with Christian",
+      ],
+      popular: false,
+    },
+  ];
+
   return (
     <section className="bg-[var(--gray-50)] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-6xl">
         <h2 className="text-center text-3xl font-bold text-[var(--gray-900)] sm:text-4xl">
           Simple, honest pricing
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-center text-lg text-[var(--gray-600)]">
           No hidden fees. No lock-in. Cancel anytime.
         </p>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          <div className="rounded-2xl border border-[var(--gray-200)] bg-white p-8 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-wide text-[var(--teal)]">One-time</p>
-            <p className="mt-2 text-4xl font-bold text-[var(--gray-900)]">
-              From $500
-            </p>
-            <p className="mt-1 text-[var(--gray-600)]">Setup fee</p>
-            <ul className="mt-6 space-y-3">
-              <li className="flex items-start gap-2 text-[var(--gray-700)]">
-                <svg className="mt-0.5 h-5 w-5 shrink-0 text-[var(--teal)]" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-                Custom AI assistant built for your business
-              </li>
-              <li className="flex items-start gap-2 text-[var(--gray-700)]">
-                <svg className="mt-0.5 h-5 w-5 shrink-0 text-[var(--teal)]" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-                Fully tested before it goes live
-              </li>
-              <li className="flex items-start gap-2 text-[var(--gray-700)]">
-                <svg className="mt-0.5 h-5 w-5 shrink-0 text-[var(--teal)]" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-                Set up to match how your business works
-              </li>
-            </ul>
-          </div>
-          <div className="rounded-2xl border-2 border-[var(--teal)] bg-white p-8 shadow-md">
-            <p className="text-sm font-semibold uppercase tracking-wide text-[var(--teal)]">Monthly</p>
-            <p className="mt-2 text-4xl font-bold text-[var(--gray-900)]">
-              From $100<span className="text-lg font-normal text-[var(--gray-500)]">/month</span>
-            </p>
-            <p className="mt-1 text-[var(--gray-600)]">Ongoing support</p>
-            <ul className="mt-6 space-y-3">
-              <li className="flex items-start gap-2 text-[var(--gray-700)]">
-                <svg className="mt-0.5 h-5 w-5 shrink-0 text-[var(--teal)]" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-                I keep everything running smoothly
-              </li>
-              <li className="flex items-start gap-2 text-[var(--gray-700)]">
-                <svg className="mt-0.5 h-5 w-5 shrink-0 text-[var(--teal)]" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-                Changes and tweaks included
-              </li>
-              <li className="flex items-start gap-2 text-[var(--gray-700)]">
-                <svg className="mt-0.5 h-5 w-5 shrink-0 text-[var(--teal)]" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-                No lock-in — cancel anytime
-              </li>
-            </ul>
-          </div>
+        <div className="mx-auto mt-6 w-fit rounded-full bg-[var(--teal-light)] px-5 py-2 text-center text-sm font-semibold text-[var(--teal)]">
+          First 14 days free — no lock-in, cancel anytime
         </div>
+        <div className="mt-12 grid gap-6 sm:grid-cols-3">
+          {packages.map((pkg) => (
+            <div
+              key={pkg.name}
+              className={`rounded-2xl bg-white p-8 shadow-sm ${
+                pkg.popular
+                  ? "border-2 border-[var(--teal)] shadow-md relative"
+                  : "border border-[var(--gray-200)]"
+              }`}
+            >
+              {pkg.popular && (
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[var(--teal)] px-4 py-1 text-xs font-semibold text-white">
+                  Most Popular
+                </span>
+              )}
+              <p className="text-lg font-semibold text-[var(--gray-900)]">{pkg.name}</p>
+              <p className="mt-3 text-4xl font-bold text-[var(--gray-900)]">
+                {pkg.monthly}<span className="text-lg font-normal text-[var(--gray-500)]">/mo</span>
+              </p>
+              <p className="mt-1 text-sm text-[var(--gray-500)]">{pkg.setup} one-time setup</p>
+              <ul className="mt-6 space-y-3">
+                {pkg.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2 text-sm text-[var(--gray-700)]">
+                    <CheckIcon />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/contact/"
+                className={`mt-8 block w-full rounded-lg py-3 text-center text-sm font-semibold ${
+                  pkg.popular
+                    ? "bg-[var(--teal)] text-white hover:bg-[var(--teal-dark)]"
+                    : "border border-[var(--teal)] text-[var(--teal)] hover:bg-[var(--teal-light)]"
+                }`}
+              >
+                Get started
+              </Link>
+            </div>
+          ))}
+        </div>
+        <p className="mt-8 text-center text-sm text-[var(--gray-500)]">
+          All packages: No lock-in. Cancel anytime.
+        </p>
       </div>
     </section>
   );
@@ -407,6 +479,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <ROIFraming />
       <PainPoints />
       <HowAIHelps />
       <CaseStudy />
