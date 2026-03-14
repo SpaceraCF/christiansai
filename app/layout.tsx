@@ -141,6 +141,11 @@ export default function RootLayout({
             }),
           }}
         />
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "ebc455b92d5d4c2da6a222b2b19e01b5"}'
+        />
       </head>
       <body className={`${geistSans.variable} antialiased`}>
         <Header />
