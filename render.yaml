@@ -1,9 +1,6 @@
 services:
   - type: web
     name: christiansai
-    runtime: node
-    buildCommand: "npm run build"
-    startCommand: "npx serve out"
-    envVars:
-      - key: NODE_VERSION
-        value: "20"
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./out
